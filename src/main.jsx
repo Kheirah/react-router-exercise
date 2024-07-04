@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
+import Movies from "./Movies.jsx";
+import DetailedMovies from "./DetailedMovie.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -10,7 +12,8 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/", element: <h3>Home</h3> },
-      { path: "movies", element: <h3>Movies</h3> },
+      { path: "movies", element: <Movies /> },
+      { path: "movies/:movieId", element: <DetailedMovies /> },
       { path: "actors", element: <h3>Actors</h3> },
     ],
   },
